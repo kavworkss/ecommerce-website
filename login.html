@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Drapess</title>
+    <link rel="icon" type="image/png" href="bgr.png">
+    <style>
+        body {
+            background-color: black; /* Set background color to black */
+            color: rgb(161, 161, 104); /* Set font color to yellow */
+            font-family: Arial, sans-serif; /* Set font family */
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Set height of the body to full viewport height */
+        }
+
+        .showForm {
+            width: 300px; /* Set form width */
+            padding: 20px; /* Add padding */
+            background-color: rgba(0, 0, 0, 0.7); /* Set background color with some transparency */
+            border-radius: 10px; /* Add border radius */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add box shadow */
+        }
+
+        h3 {
+            text-align: center; /* Center align heading */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%; /* Set input and button width to 100% */
+            margin-bottom: 10px; /* Add spacing between elements */
+            padding: 10px; /* Add padding */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            background-color: rgba(255, 255, 255, 0.1); /* Set input background color with some transparency */
+            color: rgb(161, 161, 104); /* Set input font color to yellow */
+        }
+
+        button {
+            background-color: rgb(161, 161, 104); /* Set button background color to yellow */
+            color: black; /* Set button font color to black */
+            cursor: pointer; /* Add cursor pointer */
+        }
+
+        button:hover {
+            background-color: rgb(161, 161, 104); /* Change button background color on hover */
+        }
+
+        a {
+            color: rgb(161, 161, 104); /* Set link font color to yellow */
+            text-decoration: none; /* Remove default underline */
+            font-size: 14px; /* Set font size */
+            display: block; /* Change link display to block */
+            text-align: right; /* Right align link */
+        }
+
+        a:hover {
+            color: #ffd700; /* Change link font color on hover */
+        }
+    </style>
+</head>
+<body>
+    <form class="showForm" id="loginForm">
+        <h3>Login</h3>
+        <input type="text" placeholder="Username" required name="Username" id="username"> <!-- Added id="username" -->
+        <input type="password" placeholder="Password" required name="Password">
+        <button type="submit" class="btn" id="loginBtn">Login</button>
+        <a href="index.html">Forgot Password</a>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginForm = document.getElementById("loginForm");
+            const username = document.getElementById("username"); // Get username input element
+
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Prompt welcome message with username
+                alert("Please Sign In " + username.value);
+
+                // Redirect to index.html
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>
